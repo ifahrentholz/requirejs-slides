@@ -40,14 +40,14 @@
           <section>
             <h2>Why should I use RequireJS ?</h2>
             <ul>
-              <li class="fragment">Code organization</li>
-              <li class="fragment">Code scaleability</li>
-              <li class="fragment">Code optimization</li>
-              <li class="fragment">Multi-developer teams</li>
-              <li class="fragment">Nested dependencies</li>
-              <li class="fragment">Ease of use vs. compilation</li>
-              <li class="fragment">Asynchronous</li>
-              <li class="fragment">
+              <li>Code organization</li>
+              <li>Code scaleability</li>
+              <li>Code optimization</li>
+              <li>Multi-developer teams</li>
+              <li>Nested dependencies</li>
+              <li>Ease of use vs. compilation</li>
+              <li>Asynchronous</li>
+              <li>
                 Implementation of the <a href="https://github.com/amdjs/amdjs-api/wiki/AMD" target="_blank"> AMD </a> specification. <br />
                 You can also use something like <a target="_blank" href="https://github.com/cujojs/curl">Curl.js</a>.
               </li>
@@ -69,10 +69,10 @@
         <section>
           <h2 style="margin-bottom: 30px;">What do I need to use RequireJS ?</h2>
           <ul style="margin-bottom: 30px;">
-            <li class="fragment"><a href="http://requirejs.org/docs/download.html#latest">RequireJS Library</a></li>
-            <li class="fragment">Reference it in the HTML head</li>
+            <li><a href="http://requirejs.org/docs/download.html#latest">RequireJS Library</a></li>
+            <li>Reference it in the HTML head</li>
           </ul>
-<pre class="fragment"><code contenteditable data-trim style="font-size: 18px; margin-top: 20px;" class="html">
+<pre><code contenteditable data-trim style="font-size: 18px; margin-top: 20px;" class="html">
 <!-- data-main attribute tells require.js to load
 scripts/main.js after require.js loads. -->
 <script data-main="scripts/main" src="scripts/require.js"></script>
@@ -82,18 +82,18 @@ scripts/main.js after require.js loads. -->
         <section>
           <h2>What is RequireJS doing ?</h2>
           <ul>
-          <li class="fragment">It defines two global Variables - <code>define()</code> & <code>require()</code></li>
-          <li class="fragment">It loads the main.js file (async) <u>after</u> require.js has been loaded</li>
+          <li>It defines two global Variables - <code>define()</code> & <code>require()</code></li>
+          <li>It loads the main.js file (async) <u>after</u> require.js has been loaded</li>
           </ul>
         </section>
 
         <section>
           <h2>Which responsibility has the main.js file ?</h2>
           <ul>
-            <li class="fragment">The main.js file is the entry point of the whole app</li>
-            <li class="fragment">It requires the core modules for the website</li>
-            <li class="fragment">It can define aliases for common used libs</li>
-            <li class="fragment">It can be used to compile (minimize)</li>
+            <li>The main.js file is the entry point of the whole app</li>
+            <li>It requires the core modules for the website</li>
+            <li>It can define aliases for common used libs</li>
+            <li>It can be used to compile (minimize)</li>
           </ul>
         </section>
 
@@ -517,8 +517,8 @@ define([
         history: true,
         center: true,
 
-        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        theme: Reveal.getQueryHash().theme || 'beige', // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
         // Optional libraries used to extend on reveal.js
         dependencies: [
