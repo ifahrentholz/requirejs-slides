@@ -189,11 +189,22 @@ require(['require', 'js/jquery'], function(require, $){
         <section>
           <h2>Require configuration - Paths</h2>
 <pre><code contenteditable data-trim style="font-size: 18px; margin-top: 20px;" class="javascript"> 
-require.config({
-  baseUrl: '/js',
+requirejs.config({
+  //By default load any module IDs from js/libs
+  baseUrl: 'js/libs',
+  //except, if the module ID starts with "app",
+  //load it from the js/app directory. paths
+  //config is relative to the baseUrl, and
+  //never includes a ".js" extension since
+  //the paths config could be for a directory.
   paths: {
-    'underscore': 'lodash'
+    app: '../app',
   }
+});
+
+// Start the main app logic.
+requirejs(['jquery', 'canvas', 'app/sub'],
+function   ($,        canvas,   sub) {
 });
 </code></pre>
         </section>
@@ -204,7 +215,13 @@ require.config({
               <li>If the code doesn't support AMD (no define inside of the code)</li>
             </ul>
 <pre><code contenteditable data-trim style="font-size: 18px; margin-top: 20px;" class="javascript"> 
-require.config({
+require.config({                           
+  //Remember: only use shim config for non-AMD scripts,
+  //scripts that do not already call define(). The shim
+  //config will not work correctly if used on AMD scripts,
+  //in particular, the exports and init config will not
+  //be triggered, and the deps config will be confusing
+  //for those cases.
   shim: {
     'backbone': {
       // These script dependencies should be loaded before
