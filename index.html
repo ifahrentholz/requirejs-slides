@@ -211,9 +211,7 @@ function   ($,        canvas,   sub) {
 
         <section>
           <h2>Require configuration - Shims</h2>
-            <ul style="margin-top: 30px; margin-bottom: 30px;">
-              <li>If the code doesn't support AMD (no define inside of the code)</li>
-            </ul>
+          <p style="margin-top: 30px; margin-bottom: 30px;">If the code doesn't support AMD (no define inside of the code)</p>
 <pre><code contenteditable data-trim style="font-size: 18px; margin-top: 20px;" class="javascript"> 
 require.config({                           
   //Remember: only use shim config for non-AMD scripts,
@@ -319,7 +317,7 @@ require(['jquery'], function ($) {
         <section>
           
           <h2>Require Errbacks - CDN failure 2</h2>
-          <p>You can pass an array to load in order</p>
+          <p style="margin-top: 30px; margin-bottom: 30px;">You can pass an array to load in order</p>
 <pre><code contenteditable data-trim style="font-size: 18px; margin-top: 20px;" class="javascript"> 
 requirejs.config({
   // To get timely, correct error triggers in IE, force
@@ -416,7 +414,7 @@ define(['cs!module.coffee'], function(module){
 
         <section>
           <h2>Using Require plugins</h2>
-          <p>If you want to use templates but dont want to wrap them in script-tags or so, just use the <code>text!</code> plugin </p>
+          <p style="margin-top: 30px; margin-bottom: 30px;">If you want to use templates but dont want to wrap them in script-tags or so, just use the <code>text!</code> plugin </p>
 <pre><code contenteditable data-trim style="font-size: 18px; margin-top: 20px;" class="javascript"> 
 define([
   'text!mytemplate.handlebars', 
